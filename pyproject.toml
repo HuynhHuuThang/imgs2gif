@@ -1,0 +1,23 @@
+[project]
+name = "sticker"
+version = "0.1.0"
+description = "sticker gif tranformation from image"
+authors = [
+    {name = "thuynh85",email = "thanghuu.huynh2@dxc.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "moviepy (>=2.2.1,<3.0.0)"
+]
+
+[tool.poetry.scripts]
+img2gif = "sticker_demo.main:create_progressive_gif"
+
+[tool.poetry]
+packages = [{include = "sticker_demo", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
